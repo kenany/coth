@@ -1,7 +1,6 @@
 # coth
 
 [![Build Status][travis-svg]][travis]
-[![Dependency Status][gemnasium-svg]][gemnasium]
 
 Calculate the hyperbolic cotangent of a number.
 
@@ -33,5 +32,3 @@ Given a _Number_ `x`, returns the hyperbolic cotangent of `x` as a _Number_`.
 
    [travis]: https://travis-ci.org/KenanY/coth
    [travis-svg]: https://img.shields.io/travis/KenanY/coth.svg
-   [gemnasium]: https://gemnasium.com/KenanY/coth
-   [gemnasium-svg]: https://img.shields.io/gemnasium/KenanY/coth.svg
