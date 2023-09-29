@@ -1,7 +1,7 @@
-var coth = require('../');
-var test = require('tape');
-var isFunction = require('lodash.isfunction');
-var approx = require('almost-equal');
+const test = require('tape');
+const isFunction = require('lodash.isfunction');
+const approx = require('almost-equal');
+const coth = require('../');
 
 test('exports a function', function(t) {
   t.plan(1);
