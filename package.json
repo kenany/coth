@@ -25,7 +25,7 @@
     "release": "semantic-release"
   },
   "dependencies": {
-    "tanh": "^1.1.1"
+    "tanh": "^2.0.0"
   },
   "devDependencies": {
     "@kenan/eslint-config": "^11.0.2",
