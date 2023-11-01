@@ -1,6 +1,6 @@
 {
   "name": "coth",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Calculate the hyperbolic cotangent of a number",
   "keywords": [
     "math"
