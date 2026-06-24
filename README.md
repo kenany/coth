@@ -5,7 +5,7 @@ Calculate the hyperbolic cotangent of a number.
 ## Example
 
 ``` javascript
-const coth = require('coth');
+import { coth } from 'coth';
 
 coth(Math.PI);
 // => 1.0037418731973
@@ -20,9 +20,9 @@ $ npm install coth
 ## API
 
 ``` javascript
-const coth = require('coth');
+import { coth } from 'coth';
 ```
 
 ### `coth(x)`
 
-Given a _Number_ `x`, returns the hyperbolic cotangent of `x` as a _Number_`.
+Given a _Number_ `x`, returns the hyperbolic cotangent of `x` as a _Number_.
