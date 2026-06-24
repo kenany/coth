@@ -1,41 +1,64 @@
 {
   "name": "coth",
-  "version": "2.0.1",
+  "version": "0.0.0-semantic-release",
   "description": "Calculate the hyperbolic cotangent of a number",
   "keywords": [
     "math"
   ],
-  "repository": "github:kenany/coth",
   "license": "MIT",
   "author": "Kenan Yildirim <kenan@kenany.me> (https://kenany.me/)",
-  "main": "index.js",
-  "files": [
-    "index.js"
-  ],
-  "directories": {
-    "test": "test"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenany/coth.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "commonjs",
+  "types": "dist/index.d.cts",
+  "main": "dist/index.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./*.mjs": {
+      "default": "./dist/*.mjs"
+    },
+    "./*.cjs": {
+      "default": "./dist/*.cjs"
+    },
+    "./*": {
+      "import": "./dist/*.mjs",
+      "require": "./dist/*.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE.txt"
+  ],
   "engines": {
-    "node": "18 || >=20"
+    "node": "22 || 24 || >=26"
   },
   "scripts": {
-    "test": "tape test/index.js",
-    "posttest": "npm run -s lint",
-    "lint": "eslint .",
-    "release": "semantic-release"
+    "build": "tsdown && tsc --noEmit",
+    "lint": "biome check",
+    "test": "vitest run",
+    "publint": "publint --strict",
+    "prepare": "pnpm build"
   },
   "dependencies": {
-    "tanh": "^2.0.0"
+    "tanh": "^3.0.0"
   },
   "devDependencies": {
-    "@kenan/eslint-config": "11.1.18",
-    "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/git": "10.0.1",
-    "almost-equal": "1.1.0",
+    "@biomejs/biome": "2.5.0",
+    "@containerbase/semantic-release-pnpm": "1.4.2",
+    "@kenan/biome-config": "1.0.6",
     "conventional-changelog-conventionalcommits": "9.3.1",
-    "eslint": "8.57.1",
-    "lodash.isfunction": "3.0.9",
+    "publint": "0.3.21",
     "semantic-release": "25.0.5",
-    "tape": "5.10.2"
+    "tsdown": "0.22.3",
+    "typescript": "6.0.3",
+    "vitest": "4.1.9"
   }
 }
