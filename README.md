@@ -4,7 +4,7 @@ Calculate the hyperbolic cotangent of a number.
 
 ## Example
 
-``` javascript
+```javascript
 import { coth } from 'coth';
 
 coth(Math.PI);
@@ -13,13 +13,13 @@ coth(Math.PI);
 
 ## Installation
 
-``` bash
+```bash
 $ npm install coth
 ```
 
 ## API
 
-``` javascript
+```javascript
 import { coth } from 'coth';
 ```
 
